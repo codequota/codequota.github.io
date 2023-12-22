@@ -39,13 +39,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
-      - name: Move Files and Folders
-        run: |
-          pwd
-          cp ./docs/Gemfile ./Gemfile
-          ls -la
-          ls -la ./docs
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -54,29 +47,20 @@ jobs:
 
       - name: Build site
         run: |
-          pwd
-          cp -r ./_posts ./docs/_posts
-          cp -r ./docs/_tabs ./_tabs
-          cp -r ./docs/_data ./_data
-          ls -la
-          ls -la ./docs
-          bundle exec jekyll b -d "./docs/_site${{ steps.pages.outputs.base_path }}"
+          bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
 
       - name: Test site
         run: |
-          pwd
-          ls -la
-          ls -la ./docs
-          bundle exec htmlproofer ./docs/_site \
+          bundle exec htmlproofer _site \
             \-\-disable-external=true \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: "./docs/_site${{ steps.pages.outputs.base_path }}"
+          path: "_site${{ steps.pages.outputs.base_path }}"
 
   deploy:
     environment:
