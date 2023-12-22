@@ -50,6 +50,7 @@ jobs:
           pwd
           cp -r ./_posts ./docs/_posts
           cp -r ./docs/_tabs ./_tabs
+          cp -r ./docs/_data ./_data
           ls -la
           ls -la ./docs
           bundle exec jekyll b -d "./docs/_site${{ steps.pages.outputs.base_path }}"
