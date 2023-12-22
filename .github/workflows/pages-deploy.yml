@@ -47,20 +47,20 @@ jobs:
 
       - name: Build site
         run: |
+          pwd
+          cp -r ./_posts ./docs/_posts
           ls -la
           ls -la ./docs
-          cp -r ./_posts ./docs/_posts
-          cd ./docs
-          bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
+          bundle exec jekyll b -d "./docs/_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
 
       - name: Test site
         run: |
+          pwd
           ls -la
           ls -la ./docs
-          cd ./docs
-          bundle exec htmlproofer _site \
+          bundle exec htmlproofer ./docs/_site \
             \-\-disable-external=true \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
