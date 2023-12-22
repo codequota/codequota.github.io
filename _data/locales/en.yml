@@ -48,6 +48,7 @@ copyright:
 
   # Displayed in the footer
   brief: All rights reserved.
+  verbose: ""
 
 # meta: Using the :THEME theme for :PLATFORM.
 meta: ""
