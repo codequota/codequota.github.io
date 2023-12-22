@@ -39,6 +39,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
+      - name: Move Files and Folders
+        run: |
+          pwd
+          cp ./docs/Gemfile ./Gemfile
+          ls -la
+          ls -la ./docs
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -51,7 +58,6 @@ jobs:
           cp -r ./_posts ./docs/_posts
           cp -r ./docs/_tabs ./_tabs
           cp -r ./docs/_data ./_data
-          cp ./docs/Gemfile ./Gemfile
           ls -la
           ls -la ./docs
           bundle exec jekyll b -d "./docs/_site${{ steps.pages.outputs.base_path }}"
