@@ -16,10 +16,10 @@ timezone: America/New_York
 
 title: CodeQuota # the main title
 
-tagline: A website with articles about code and technologies. # it will display as the sub-title
+tagline: A website with articles about code and technology. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A website with articles about code and technologies.
+  A website with articles about code and technology.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
