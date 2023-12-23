@@ -48,10 +48,10 @@ copyright:
 
   # Displayed in the footer
   brief: All rights reserved.
-  verbose: ""
+  verbose: nil
 
 # meta: Using the :THEME theme for :PLATFORM.
-meta: ""
+meta: nil
 
 not_found:
   statment: Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
