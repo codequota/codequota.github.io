@@ -24,7 +24,7 @@ search:
 
 panel:
   lastmod: Recently Updated
-  trending_tags: Trending Tags
+  trending_tags: Recent Tags
   toc: Contents
 
 copyright:
@@ -37,8 +37,8 @@ copyright:
   # Shown at the bottom of the post
   license:
     template: ""
-    # name: ""
-    # link: ""
+    name: ""
+    link: ""
 
   # Displayed in the footer
   # brief: Some rights reserved.
