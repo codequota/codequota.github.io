@@ -11,9 +11,9 @@
     {{ '©' }}
     <time>{{ 'now' | date: '%Y' }}</time>
     {% if "" != site.social.copyrightlink and "" != site.social.name %}
-      <a href="{{ site.social.copyrightlink }}">{{- site.social.name -}}</a>
+      <a href="{{ site.social.copyrightlink }}">{{- site.social.name -}}</a>.
     {% elsif "" != site.social.name %}
-      {{- site.social.name -}}
+      {{- site.social.name -}}.
     {% endif %}
     {% if "" != site.data.locales[include.lang].copyright.brief and "" != site.data.locales[include.lang].copyright.verbose %}
       <span
