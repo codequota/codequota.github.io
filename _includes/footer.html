@@ -30,15 +30,11 @@
 
   {% if "" != site.data.locales[include.lang].meta %}
     <p>
-      {%- capture _platform -%}
-        <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+      {%- capture _tos -%}
+        <a href="{{ site.baseurl }}/testtab/">Terms of Use</a>
       {%- endcapture -%}
 
-      {%- capture _theme -%}
-        <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a>
-      {%- endcapture -%}
-
-      {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
+      {{ site.data.locales[include.lang].meta | replace: ':TERMSOFUSE', _tos }}
     </p>
   {% endif %}
 </footer>
