@@ -31,7 +31,7 @@
   {% if "" != site.data.locales[include.lang].meta %}
     <p>
       {%- capture _tos -%}
-        <a href="{{ site.baseurl }}/testtab/">Terms of Use</a>
+        <a href="{{ site.baseurl }}/tos/">Terms of Use</a>
       {%- endcapture -%}
 
       {{ site.data.locales[include.lang].meta | replace: ':TERMSOFUSE', _tos }}
